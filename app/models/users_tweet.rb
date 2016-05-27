@@ -1,5 +1,7 @@
 class UsersTweet < ActiveRecord::Base
   # Remember to create a migration!
-  belongs_to :user, foreign_key: :retweeter_id, class_name: 'User'
-  belongs_to :tweet, foreign_key: :tweeter_id
+  belongs_to :user
+  belongs_to :tweet
+  has_many :tweets
+  has_many :users
 end
