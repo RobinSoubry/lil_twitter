@@ -1,9 +1,16 @@
 <div class="container" id="side_navbar">
 <h1>Welcome <%= @user.username %></h1>
-<button id='button' type='button' action='/' name="logout">Logout</button>
+<form action='/create' method='get'>
+  <input id='button' type='submit' value="Create A Post">
+</form>
+<form action='/logout' method='post'>
+  <input id='button' type='submit' value="Logout">
+</form>
 </div>
+
+<h3 id="top_navbar">Here's the internet feed</h3>
+
 <div class="container">
-<p id="top_navbar"> Here's 'twitter-feed</p>
 <% @tweets.each do |tweet| %>
     <div class="posting">
     <p id="post_data"><%= tweet.user.username%></p>
