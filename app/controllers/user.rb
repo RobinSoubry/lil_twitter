@@ -9,6 +9,10 @@ post '/' do
   redirect '/'
 end
 
+get '/signup' do
+  erb :signup
+end
+
 
 post '/login' do
   @user = User.find_by(email: params[:email])
