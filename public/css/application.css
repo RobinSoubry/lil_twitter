@@ -12,14 +12,16 @@ body {
 }
 
 #top_navbar {
+
 	top: 0;
 	left: 0;
 	z-index: 9999;
 	position: fixed;
 	padding: 20px;
-	height: 20px;
+	height: 40px;
 	width: 100%;
 	background-color: white;
+	margin-top: -10px;
 
 }
 
@@ -44,7 +46,7 @@ body {
 	background-color: #F5F8FA;
 }
 
-#posting {
+.posting {
 	font-family: AmericanTypewriter;
 	border: 2px solid white;
 	border-radius: 10px;
@@ -56,6 +58,13 @@ body {
 	background-color: white;
 }
 
+#post_body {
+	font-size: 20;
+}
+
+#post_data {
+	font-size: 12;
+}
 
 @media screen and (max-width: 246px) {
 /* applies only if the screen is narrower than 500px */

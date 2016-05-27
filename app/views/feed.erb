@@ -1,10 +1,14 @@
-<div class="container">
+<div class="container" id="side_navbar">
 <h1>Welcome <%= @user.username %></h1>
-<p> Here goes the twitter-feed</p>
+<button id='button' type='button' action='/' name="logout">Logout</button>
+</div>
+<div class="container">
+<p id="top_navbar"> Here's 'twitter-feed</p>
 <% @tweets.each do |tweet| %>
-    <div id="posting">
-    <p><%= tweet.body  %></p>
-    <p><%= tweet.created_at  %></p>
+    <div class="posting">
+    <p id="post_data"><%= tweet.user.username%></p>
+    <p id="post_body"><%= tweet.body  %></p>
+    <p id="post_data"><%= tweet.created_at  %></p>
     <hr>
     </div>
     <% end %>
