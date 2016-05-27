@@ -1,0 +1,15 @@
+<div class="container">
+
+<h3 id="top_navbar"><a href="/home">Splattr!</a></h3>
+
+
+  <h1>Explore all of our users!</h1>
+  <ul>
+    <% @all_users.each do |user| %>
+        <div class="posting">
+        <li><a href="/users/<%= user.id %>"> <%= user.username %> </a></li>
+        <hr>
+        </div>
+        <% end %>
+  </ul>
+</div>
