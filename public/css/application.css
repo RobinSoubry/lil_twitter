@@ -1,14 +1,16 @@
 .container {
+	font-family: AmericanTypewriter, Helvetica;
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  text-align: center;
 }
 body {
   padding-left: 200px;
   padding-right: 200px;
 	background-color: #F5F8FA;
 }
+
 
 #top_navbar {
 	top: 0;
@@ -25,7 +27,7 @@ body {
 #side_navbar {
 	top: 70px;
 	left: 0;
-	padding-top: 5px; 
+	padding-top: 5px;
 	padding-left: 30px;
 	position: fixed;
 	width: 200px;
@@ -54,3 +56,12 @@ body {
 	margin: 40px;
 	background-color: white;
 }
+
+@media screen and (max-width: 246px) {
+/* applies only if the screen is narrower than 500px */
+
+}
+
+
+
+
