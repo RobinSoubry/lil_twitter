@@ -6,24 +6,25 @@ post '/' do
   new_user = User.new(email: params[:email], username: params[:username])
   new_user.password= (params[:password])
   new_user.save
-  redirect '/home'
-end
-
-get '/home' do
-  erb :success
+  redirect '/'
 end
 
 
 post '/login' do
-  user = User.find_by(email: params[:email])
-  if user.authenticate?(params[:password])
-    session[:user_id] = user.id
-    redirect '/home'
+  @user = User.find_by(email: params[:email])
+  if @user.authenticate?(params[:password])
+    session[:user_id] = @user.id
+    redirect "/users/#{@user.id}"
   else
-    erb :success
+    erb :index
   end
 end
 
+get '/users/:id' do
+  p @user = User.find(session[:user_id])
+  p @tweets = Tweet.where(@user.friendships.user_id)
+  erb :feed
+end
 
 
 get '/logout' do
