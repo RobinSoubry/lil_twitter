@@ -12,14 +12,14 @@ User.delete_all
 300.times do
   Tweet.create(
     body: Faker::Book.title,
-    tweeter_id: rand(1..100)
+    tweeter_id: rand(1..20)
     )
 end
 
 100.times do
   Friendship.create(
-    leader_id: rand(1..100),
-    follower_id: rand(1..100)
+    leader_id: rand(1..20),
+    follower_id: rand(1..20)
     )
 end
 
