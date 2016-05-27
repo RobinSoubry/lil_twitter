@@ -12,7 +12,8 @@ body {
 }
 
 #top_navbar {
-
+	font-family: AmericanTypewriter, Helvetica;
+	text-align: center;
 	top: 0;
 	left: 0;
 	z-index: 9999;
