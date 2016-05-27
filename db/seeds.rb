@@ -7,25 +7,26 @@ require 'securerandom'
 
 Tweet.delete_all
 Friendship.delete_all
-UsersTweet.delete_all
+User.delete_all
 
-20.times do
+300.times do
   Tweet.create(
     body: Faker::Book.title,
-    tweeter_id: rand(1..5)
+    tweeter_id: rand(1..20)
     )
 end
 
-10.times do
+100.times do
   Friendship.create(
-    user_id: rand(1..5),
-    follower_id: rand(1..5)
+    leader_id: rand(1..20),
+    follower_id: rand(1..20)
     )
 end
 
-40.times do
-  UsersTweet.create(
-    user_id: rand(1..5),
-    tweet_id: rand(1..20)
+20.times do
+  User.create(
+    email: Faker::Internet.email,
+    username: Faker::Name.name,
+    password: "1234"
     )
 end

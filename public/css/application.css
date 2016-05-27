@@ -1,31 +1,46 @@
+/*body {
+	background-repeat: no-repeat;
+	background-position: center, center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+*/
+
 .container {
+	text-align: center;
+	font-family: AmericanTypewriter, Helvetica;
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
 body {
   padding-left: 200px;
   padding-right: 200px;
-	background-color: #F5F8FA;
+	background-color: gray ;
+	background-image: url("../background.jpg")
 }
 
 #top_navbar {
+	font-family: AmericanTypewriter, Helvetica;
+	text-align: center;
+	font-size: 40px;
 	top: 0;
 	left: 0;
 	z-index: 9999;
 	position: fixed;
+	padding-left: 20px;
 	padding: 20px;
-	height: 20px;
+	height: 40px;
 	width: 100%;
 	background-color: white;
+	margin-top: -10px;
 
 }
 
 #side_navbar {
 	top: 70px;
 	left: 0;
-	padding-top: 5px; 
+	padding-top: 5px;
 	padding-left: 30px;
 	position: fixed;
 	width: 200px;
@@ -43,14 +58,31 @@ body {
 	background-color: #F5F8FA;
 }
 
-#posting {
+.posting {
 	font-family: AmericanTypewriter;
 	border: 2px solid white;
 	border-radius: 10px;
-	padding-top: 30px;
-	padding-bottom: 60px;
-	padding-left: 180px;
-	padding-right: 180px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 120px;
+	padding-right: 120px;
 	margin: 40px;
 	background-color: white;
+}
+
+#post {
+	margin-top: 170px;
+}
+
+#post_body {
+	font-size: 20;
+}
+
+#post_data {
+	font-size: 12;
+}
+
+@media screen and (max-width: 246px) {
+/* applies only if the screen is narrower than 500px */
+
 }
