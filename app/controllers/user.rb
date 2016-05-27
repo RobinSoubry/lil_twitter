@@ -22,7 +22,9 @@ end
 
 get '/users/:id' do
   p @user = User.find(session[:user_id])
-  p @tweets = Tweet.where(@user.friendships.user_id)
+  p leaders = @user.leaders
+  p leaders_tweets_a = leaders.map {|user| user.tweets}
+  p @tweets = leaders_tweets_a.flatten.sort_by{|tweet| tweet.created_at}
   erb :feed
 end
 

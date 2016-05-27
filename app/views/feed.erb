@@ -1,5 +1,11 @@
 <div class="container">
 <h1>Welcome <%= @user.username %></h1>
 <p> Here goes the twitter-feed</p>
-
+<% @tweets.each do |tweet| %>
+    <div id="posting">
+    <p><%= tweet.body  %></p>
+    <p><%= tweet.created_at  %></p>
+    <hr>
+    </div>
+    <% end %>
 </div>
