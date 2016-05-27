@@ -6,7 +6,7 @@ require 'securerandom'
 #3.) Retrieve Faker Here: https://github.com/stympy/faker
 
 Tweet.delete_all
-LeadersFollower.delete_all
+Friendship.delete_all
 UsersTweet.delete_all
 
 20.times do
@@ -17,15 +17,15 @@ UsersTweet.delete_all
 end
 
 10.times do
-  LeadersFollower.create(
-    leader_id: rand(1..5),
+  Friendship.create(
+    user_id: rand(1..5),
     follower_id: rand(1..5)
     )
 end
 
 40.times do
   UsersTweet.create(
-    retweeter_id: rand(1..5),
+    user_id: rand(1..5),
     tweet_id: rand(1..20)
     )
 end
