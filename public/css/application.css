@@ -5,16 +5,21 @@
   border: 1px dotted black;
 }
 body {
-  padding-left: 130px;
+  padding-left: 200px;
+  padding-right: 200px;
+	background-color: #F5F8FA;
 }
 
 #top_navbar {
-	padding-top: 5px; 
-	padding-left: 15px;
 	top: 0;
 	left: 0;
+	padding-top: 5px; 
+	padding-left: 30px;
 	position: fixed;
-	width: 100px;
+	width: 150px;
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color: white;
 }
 
 #button {
@@ -33,4 +38,5 @@ body {
 	padding-left: 180px;
 	padding-right: 180px;
 	margin: 40px;
+	background-color: white;
 }
