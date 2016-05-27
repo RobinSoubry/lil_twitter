@@ -11,7 +11,7 @@ UsersTweet.delete_all
 
 20.times do
   Tweet.create(
-    body: Faker::ChuckNorris.fact,
+    body: Faker::Book.title,
     tweeter_id: rand(1..5)
     )
 end
