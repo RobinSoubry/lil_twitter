@@ -4,6 +4,33 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
-th {
-  text-align: left;
+body {
+  padding-left: 130px;
+}
+
+#top_navbar {
+	padding-top: 5px; 
+	padding-left: 15px;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100px;
+}
+
+#button {
+	font-family: AmericanTypewriter;
+	border-radius: 10px;
+	border: 1px solid blue;
+	width: 100px;
+}
+
+#tweet {
+	font-family: AmericanTypewriter;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding-top: 30px;
+	padding-bottom: 60px;
+	padding-left: 180px;
+	padding-right: 180px;
+	margin: 40px;
 }
