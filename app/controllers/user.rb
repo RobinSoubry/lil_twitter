@@ -1,6 +1,16 @@
-# get '/' do
-#   erb :index
-# end
+get '/signup' do
+  erb :signup
+end
+
+
+post '/signup' do
+  if params[:password] == params[:confirm_password]
+  user = User.create(email: params[:email], username: params[:username], password: params[:password])
+    redirect '/'
+  else
+    redirect '/signup'
+  end
+end
 
 post '/' do
   new_user = User.new(email: params[:email], username: params[:username])
