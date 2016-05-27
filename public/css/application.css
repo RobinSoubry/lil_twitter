@@ -4,6 +4,53 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
-th {
-  text-align: left;
+body {
+  padding-left: 200px;
+  padding-right: 200px;
+	background-color: #F5F8FA;
+}
+
+#top_navbar {
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	position: fixed;
+	padding: 20px;
+	height: 20px;
+	width: 100%;
+	background-color: white;
+
+}
+
+#side_navbar {
+	top: 70px;
+	left: 0;
+	padding-top: 5px; 
+	padding-left: 30px;
+	position: fixed;
+	width: 200px;
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: white;
+}
+
+#button {
+	font-family: AmericanTypewriter, Helvetica;
+	border-radius: 10px;
+	border: 1px solid gray;
+	width: auto;
+	margin-left: 40px;
+	background-color: #F5F8FA;
+}
+
+#posting {
+	font-family: AmericanTypewriter;
+	border: 2px solid white;
+	border-radius: 10px;
+	padding-top: 30px;
+	padding-bottom: 60px;
+	padding-left: 180px;
+	padding-right: 180px;
+	margin: 40px;
+	background-color: white;
 }
