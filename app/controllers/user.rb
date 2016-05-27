@@ -28,12 +28,17 @@ get '/users/:id' do
   p @user = User.find(session[:user_id])
   p leaders = @user.leaders
   p leaders_tweets_a = leaders.map {|user| user.tweets}
-  p @tweets = leaders_tweets_a.flatten.sort_by{|tweet| tweet.created_at}
+    leaders_tweets_a = leaders_tweets_a.concat(@user.tweets)
+  p @tweets = leaders_tweets_a.flatten.uniq.sort{|tweet_1, tweet_2| tweet_2.created_at <=> tweet_1.created_at }
   erb :feed
 end
 
 
-get '/logout' do
+post '/logout' do
   session[:user_id] = nil
-  erb :index
+  redirect '/'
+end
+
+get '/create' do
+  erb :create
 end
